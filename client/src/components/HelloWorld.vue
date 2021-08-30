@@ -27,7 +27,12 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
-  </div>
+    <div style="margin: 10px">
+        <p>
+          <router-link :to="{name:'Ping'}">To Ping</router-link>
+        </p>
+    </div>
+  </div> 
 </template>
 
 <script>
