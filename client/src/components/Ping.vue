@@ -1,24 +1,41 @@
 <template>
     <div>
-      <p>{{msg}}</p>
-      <p>Test message of Ping component</p>  
-      <div style="margin: 10px">
-        <p>
-          <router-link :to="{name:'HelloWorld'}">To HelloWorld</router-link>
-        </p>
-    </div>
+    <div class="container">
+          <button type="button" class="btn btn-primary">{{ msg }}</button>
+    </div>      
     </div>
 </template>
+
+
 <script>
+import axios from 'axios'
+
 export default {
     name: 'Ping',
     data() {
         return {
             msg:'Ping works!'
         }
+    },
+    methods: {
+        getMessage() {
+            const path  = 'http://localhost:5000/ping'
+            axios.get(path)
+            .then((res) => {
+                this.msg = res.data
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+        }
+    },
+    created() {
+        this.getMessage()
     }
 }
 </script>
+
+
 <style>
     
 </style>

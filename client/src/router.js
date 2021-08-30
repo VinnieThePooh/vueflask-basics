@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Ping from './components/Ping.vue'
-import HelloWorld from './components/HelloWorld'
+import Books from './components/Books.vue'
+// import HelloWorld from './components/HelloWorld'
 
 const routes = [  
   {
@@ -10,8 +11,8 @@ const routes = [
   },
   {
     path: '/',
-    name: 'HelloWorld',
-    component: HelloWorld
+    name: 'Books',
+    component: Books
   }
 ]
 
