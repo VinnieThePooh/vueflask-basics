@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -7,6 +8,6 @@ import { createApp } from 'vue'
 
 
 
-const app = createApp(App).use(router);
+const app = createApp(App).use(router)
 app.mount('#app');
 
